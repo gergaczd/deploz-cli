@@ -1,5 +1,5 @@
-import {RepositoryDescriptor, schema} from "./schema";
-import Conf from "conf";
+import { RepositoryDescriptor, schema } from './schema';
+import Conf from 'conf';
 
 export class Store {
   private readonly conf: Conf;
@@ -10,7 +10,6 @@ export class Store {
 
   getRepositories(): RepositoryDescriptor[] {
     return (this.conf.get('repositories') || []) as RepositoryDescriptor[];
-
   }
 
   setRepositories(repositories: RepositoryDescriptor[]) {

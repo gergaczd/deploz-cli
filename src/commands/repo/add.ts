@@ -1,4 +1,4 @@
-import {Command, flags} from '@oclif/command';
+import { Command, flags } from '@oclif/command';
 import { RepositoryStore } from '../../lib/repository';
 
 export default class Add extends Command {
@@ -21,6 +21,6 @@ export default class Add extends Command {
     const { args } = this.parse(Add);
 
     const store = new RepositoryStore();
-    store.addRepository(process.cwd(), args['type']);
+    store.addRepository(process.cwd(), args.type);
   }
 }

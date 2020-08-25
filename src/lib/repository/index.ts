@@ -1,5 +1,5 @@
 import { RepositoryDescriptor } from './schema';
-import {Store} from "./store";
+import { Store } from './store';
 
 export class RepositoryStore {
   private readonly store: Store;

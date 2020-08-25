@@ -66,7 +66,7 @@
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "pack": "oclif-dev pack",
     "postpack": "rm -f oclif.manifest.json",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "test": "nyc --extension .ts mocha --forbid-only \"**/*.test.ts\"",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "test:unit": "mocha --forbid-only \"**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
