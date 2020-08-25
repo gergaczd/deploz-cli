@@ -19,7 +19,7 @@ $ npm install -g deploz-cli
 $ deploz COMMAND
 running command...
 $ deploz (-v|--version|version)
-deploz-cli/0.0.0 darwin-x64 node-v13.13.0
+deploz-cli/0.0.1 darwin-x64 node-v13.13.0
 $ deploz --help [COMMAND]
 USAGE
   $ deploz COMMAND
@@ -36,6 +36,7 @@ USAGE
 * [`deploz repo:list`](#deploz-repolist)
 * [`deploz repo:remove`](#deploz-reporemove)
 * [`deploz service`](#deploz-service)
+* [`deploz update [CHANNEL]`](#deploz-update-channel)
 
 ## `deploz autocomplete [SHELL]`
 
@@ -78,7 +79,7 @@ OPTIONS
                        that you want to deploy, otherwise it will be the current one
 ```
 
-_See code: [src/commands/client.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.0/src/commands/client.ts)_
+_See code: [src/commands/client.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.1/src/commands/client.ts)_
 
 ## `deploz help [COMMAND]`
 
@@ -111,7 +112,7 @@ OPTIONS
   -l, --limit=limit  [default: 10] Define how many commits you want to choose from
 ```
 
-_See code: [src/commands/repo/index.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.0/src/commands/repo/index.ts)_
+_See code: [src/commands/repo/index.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.1/src/commands/repo/index.ts)_
 
 ## `deploz repo:add TYPE`
 
@@ -128,7 +129,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/repo/add.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.0/src/commands/repo/add.ts)_
+_See code: [src/commands/repo/add.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.1/src/commands/repo/add.ts)_
 
 ## `deploz repo:list`
 
@@ -139,7 +140,7 @@ USAGE
   $ deploz repo:list
 ```
 
-_See code: [src/commands/repo/list.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.0/src/commands/repo/list.ts)_
+_See code: [src/commands/repo/list.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.1/src/commands/repo/list.ts)_
 
 ## `deploz repo:remove`
 
@@ -153,7 +154,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/repo/remove.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.0/src/commands/repo/remove.ts)_
+_See code: [src/commands/repo/remove.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.1/src/commands/repo/remove.ts)_
 
 ## `deploz service`
 
@@ -175,5 +176,16 @@ OPTIONS
                      production deploys
 ```
 
-_See code: [src/commands/service.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.0/src/commands/service.ts)_
+_See code: [src/commands/service.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.1/src/commands/service.ts)_
+
+## `deploz update [CHANNEL]`
+
+update the deploz CLI
+
+```
+USAGE
+  $ deploz update [CHANNEL]
+```
+
+_See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v1.3.10/src/commands/update.ts)_
 <!-- commandsstop -->
