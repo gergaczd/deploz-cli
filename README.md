@@ -19,7 +19,7 @@ $ npm install -g deploz-cli
 $ deploz COMMAND
 running command...
 $ deploz (-v|--version|version)
-deploz-cli/0.0.2 darwin-x64 node-v13.13.0
+deploz-cli/0.0.3 darwin-x64 node-v13.13.0
 $ deploz --help [COMMAND]
 USAGE
   $ deploz COMMAND
@@ -79,7 +79,7 @@ OPTIONS
                        that you want to deploy, otherwise it will be the current one
 ```
 
-_See code: [src/commands/client.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.2/src/commands/client.ts)_
+_See code: [src/commands/client.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.3/src/commands/client.ts)_
 
 ## `deploz help [COMMAND]`
 
@@ -112,7 +112,7 @@ OPTIONS
   -l, --limit=limit  [default: 10] Define how many commits you want to choose from
 ```
 
-_See code: [src/commands/repo/index.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.2/src/commands/repo/index.ts)_
+_See code: [src/commands/repo/index.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.3/src/commands/repo/index.ts)_
 
 ## `deploz repo:add TYPE`
 
@@ -129,7 +129,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/repo/add.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.2/src/commands/repo/add.ts)_
+_See code: [src/commands/repo/add.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.3/src/commands/repo/add.ts)_
 
 ## `deploz repo:list`
 
@@ -140,7 +140,7 @@ USAGE
   $ deploz repo:list
 ```
 
-_See code: [src/commands/repo/list.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.2/src/commands/repo/list.ts)_
+_See code: [src/commands/repo/list.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.3/src/commands/repo/list.ts)_
 
 ## `deploz repo:remove`
 
@@ -154,7 +154,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/repo/remove.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.2/src/commands/repo/remove.ts)_
+_See code: [src/commands/repo/remove.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.3/src/commands/repo/remove.ts)_
 
 ## `deploz service`
 
@@ -176,7 +176,7 @@ OPTIONS
                      production deploys
 ```
 
-_See code: [src/commands/service.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.2/src/commands/service.ts)_
+_See code: [src/commands/service.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.3/src/commands/service.ts)_
 
 ## `deploz update [CHANNEL]`
 

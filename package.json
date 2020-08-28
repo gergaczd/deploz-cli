@@ -1,6 +1,6 @@
 {
   "name": "deploz-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "gergaczd @gergaczd",
   "bin": {
     "deploz": "./bin/run"
