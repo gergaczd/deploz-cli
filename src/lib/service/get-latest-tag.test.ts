@@ -1,5 +1,5 @@
-import { getLatestTag } from "./get-latest-tag";
-import {expect} from "@oclif/test";
+import { getLatestTag } from './get-latest-tag';
+import { expect } from '@oclif/test';
 
 describe('#getLatestTag', () => {
   it('should return with the tag that has the highest number', () => {

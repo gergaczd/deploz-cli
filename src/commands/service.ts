@@ -4,7 +4,7 @@ import { calculateReleaseTag } from '../lib/service/calculate-release-tag';
 import { selectCommit } from '../lib/select-commit';
 import cli from 'cli-ux';
 import { deployFlags } from '../lib/deploy-flags';
-import {getLatestTag} from "../lib/service/get-latest-tag";
+import { getLatestTag } from '../lib/service/get-latest-tag';
 
 export default class Service extends Command {
   static description = 'Deploys a service app to production. It creates an incremental tag for the selected commit based in the tag prefix given'
