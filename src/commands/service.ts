@@ -4,6 +4,7 @@ import { calculateReleaseTag } from '../lib/service/calculate-release-tag';
 import { selectCommit } from '../lib/select-commit';
 import cli from 'cli-ux';
 import { deployFlags } from '../lib/deploy-flags';
+import {getLatestTag} from "../lib/service/get-latest-tag";
 
 export default class Service extends Command {
   static description = 'Deploys a service app to production. It creates an incremental tag for the selected commit based in the tag prefix given'
@@ -41,7 +42,7 @@ export default class Service extends Command {
   }
 
   private async getNextReleaseTag(): Promise<string> {
-    const { all: tags } = await this.git.tags();
+    const tags = await this.getTags();
     return calculateReleaseTag(this.flags.tag, tags);
   }
 
@@ -51,8 +52,23 @@ export default class Service extends Command {
   }
 
   private async selectCommit() {
-    const { all: logs } = await this.git.log();
-    return selectCommit(logs, this.flags.limit);
+    const [{ all: logs }, latestMatcher] = await Promise.all([
+      this.git.log(),
+      this.getLatestMatcher()
+    ]);
+
+    return selectCommit(logs, this.flags.limit, latestMatcher);
+  }
+
+  private async getLatestMatcher(): Promise<string> {
+    const tags = await this.getTags();
+    const latestTag = getLatestTag(this.flags.tag, tags);
+    return `tag: ${latestTag}`;
+  }
+
+  private async getTags(): Promise<string[]> {
+    const { all: tags } = await this.git.tags();
+    return tags;
   }
 
   private async deploy() {

@@ -68,7 +68,7 @@
     "postpack": "rm -f oclif.manifest.json",
     "test": "nyc --extension .ts mocha --forbid-only \"**/*.test.ts\"",
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "test:unit": "mocha --forbid-only \"**/*.test.ts\"",
+    "test:unit": "mocha \"**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
   "types": "lib/index.d.ts"

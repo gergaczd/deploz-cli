@@ -30,6 +30,7 @@ USAGE
 <!-- commands -->
 * [`deploz autocomplete [SHELL]`](#deploz-autocomplete-shell)
 * [`deploz client`](#deploz-client)
+* [`deploz hello [FILE]`](#deploz-hello-file)
 * [`deploz help [COMMAND]`](#deploz-help-command)
 * [`deploz repo`](#deploz-repo)
 * [`deploz repo:add TYPE`](#deploz-repoadd-type)
@@ -80,6 +81,26 @@ OPTIONS
 ```
 
 _See code: [src/commands/client.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.1/src/commands/client.ts)_
+
+## `deploz hello [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ deploz hello [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+
+EXAMPLE
+  $ deploz hello
+  hello world from ./src/hello.ts!
+```
+
+_See code: [src/commands/hello.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.1/src/commands/hello.ts)_
 
 ## `deploz help [COMMAND]`
 

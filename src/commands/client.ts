@@ -47,7 +47,8 @@ export default class Client extends Command {
 
   private async selectCommit() {
     const { all: logs } = await this.git.log();
-    return selectCommit(logs, this.flags.limit);
+    const latestMatcher = this.getLatestMatcher();
+    return selectCommit(logs, this.flags.limit, latestMatcher);
   }
 
   private getOptions(): Record<string, OptionsValues> {
@@ -58,5 +59,9 @@ export default class Client extends Command {
     cli.action.start('deploying');
     await this.git.push('origin', branch, options);
     cli.action.stop();
+  }
+
+  private getLatestMatcher() {
+    return `origin/${this.flags.branch}`;
   }
 }
