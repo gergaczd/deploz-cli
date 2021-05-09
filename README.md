@@ -13,6 +13,7 @@ deploz-cli
 * [Commands](#commands)
 <!-- tocstop -->
 # Usage
+Simply download from the relases.
 <!-- usage -->
 ```sh-session
 $ npm install -g deploz-cli
@@ -126,7 +127,10 @@ ARGUMENTS
   TYPE  (service|client) Define the type of the repository, it specifies how it will be deployed
 
 OPTIONS
-  -h, --help  show CLI help
+  -h, --help       show CLI help
+
+  -p, --path=path  [default: /Users/dgergacz/workspace/deploz-cli] Use a path where your repository is checked out that
+                   you want to deploy, otherwise it will be the current one
 ```
 
 _See code: [src/commands/repo/add.ts](https://github.com/gergaczd/deploz-cli/blob/v0.0.3/src/commands/repo/add.ts)_
@@ -185,7 +189,10 @@ update the deploz CLI
 ```
 USAGE
   $ deploz update [CHANNEL]
+
+OPTIONS
+  --from-local  interactively choose an already installed version
 ```
 
-_See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v1.3.10/src/commands/update.ts)_
+_See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v1.4.0-3/src/commands/update.ts)_
 <!-- commandsstop -->
