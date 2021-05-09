@@ -15,6 +15,6 @@ export const deployFlags = {
   path: flags.string({
     char: 'p',
     description: 'Use a path where your repository is checked out that you want to deploy, otherwise it will be the current one',
-    default: process.cwd()
+    default: () => process.cwd()
   })
 };

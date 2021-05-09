@@ -5,7 +5,12 @@ export default class Add extends Command {
   static description = 'Adds a repository'
 
   static flags = {
-    help: flags.help({ char: 'h' })
+    help: flags.help({ char: 'h' }),
+    path: flags.string({
+      char: 'p',
+      description: 'Use a path where your repository is checked out that you want to deploy, otherwise it will be the current one',
+      default: () => process.cwd()
+    })
   }
 
   static args = [
@@ -18,9 +23,10 @@ export default class Add extends Command {
   ]
 
   async run() {
-    const { args } = this.parse(Add);
+    const { args, flags } = this.parse(Add);
 
     const store = new RepositoryStore();
-    store.addRepository(process.cwd(), args.type);
+    store.addRepository(flags.path, args.type);
   }
 }
+  
