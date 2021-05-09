@@ -29,6 +29,7 @@ export default class Service extends Command {
   }
 
   async run() {
+    await this.git.pull('origin', 'master');
     const nextTag = await this.getNextReleaseTag();
     this.log(`next tag will be: ${nextTag}`);
 
