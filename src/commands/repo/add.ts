@@ -29,4 +29,3 @@ export default class Add extends Command {
     store.addRepository(flags.path, args.type);
   }
 }
-  

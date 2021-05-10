@@ -14,6 +14,11 @@ export default class Remove extends Command {
 
     const repositories = store.getRepositories();
 
+    if (repositories.length === 0) {
+      console.log('There are no saved repository');
+      return;
+    }
+
     const repositoryIndex = await selectRepository(repositories);
 
     store.removeRepository(repositoryIndex);

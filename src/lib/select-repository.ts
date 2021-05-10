@@ -13,8 +13,7 @@ export const selectRepository = async (repositories: RepositoryDescriptor[]) => 
     type: 'select',
     name: 'value',
     message: 'Choose a repo: ',
-    choices: formattedRepositories,
-    initial: 1
+    choices: formattedRepositories
   });
 
   return selectedRepository;

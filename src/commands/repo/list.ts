@@ -9,6 +9,11 @@ export default class List extends Command {
     const store = new RepositoryStore();
     const repositories = store.getRepositories();
 
+    if (repositories.length === 0) {
+      console.log('There are no saved repository');
+      return;
+    }
+
     cli.table(repositories, { path: {}, type: {} });
   }
 }

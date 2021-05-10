@@ -30,6 +30,11 @@ export default class Repo extends Command {
 
     const repositories = store.getRepositories();
 
+    if (repositories.length === 0) {
+      console.log('There are no saved repository');
+      return;
+    }
+
     const selectedRepository = await this.selectRepository(repositories);
 
     const deployClass = this.getDeployClass(selectedRepository);
