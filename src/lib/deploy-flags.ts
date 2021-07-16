@@ -16,5 +16,11 @@ export const deployFlags = {
     char: 'p',
     description: 'Use a path where your repository is checked out that you want to deploy, otherwise it will be the current one',
     default: () => process.cwd()
+  }),
+  from: flags.string({
+    char: 'f',
+    description: 'Define the from branch name which should be deployed to the production branch',
+    default: 'master',
+    env: 'DEPLOZ_CLI_FROM_BRANCH'
   })
 };

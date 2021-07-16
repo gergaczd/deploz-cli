@@ -27,9 +27,13 @@ export default class Client extends Command {
     return simplegit(this.flags.path);
   }
 
+  get fromBranch() {
+    return this.flags.from;
+  }
+
   async run() {
-    await this.git.pull('origin', 'master');
-    await this.git.push('origin', 'master');
+    await this.git.pull('origin', this.fromBranch);
+    await this.git.push('origin', this.fromBranch);
 
     const reference = await this.getReference();
     const branch = `${reference}:${this.flags.branch}`;
@@ -39,7 +43,7 @@ export default class Client extends Command {
 
   private async getReference() {
     if (!this.flags.commit) {
-      return 'master';
+      return this.fromBranch;
     }
 
     return this.selectCommit();

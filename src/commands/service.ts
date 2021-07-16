@@ -28,8 +28,12 @@ export default class Service extends Command {
     return simplegit(this.flags.path);
   }
 
+  get fromBranch() {
+    return this.flags.from;
+  }
+
   async run() {
-    await this.git.pull('origin', 'master');
+    await this.git.pull('origin', this.fromBranch);
     const nextTag = await this.getNextReleaseTag();
     this.log(`next tag will be: ${nextTag}`);
 
